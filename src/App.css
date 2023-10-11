@@ -1,38 +1,293 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-app {
+  width: 100%;
+  height: 600px;
+  background-image: url("../backgroundimg1.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  border: 2px solid rgb(248, 248, 247);
+  background-color: rgb(120, 122, 117);
+  opacity: 0.7;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-nav-container {
   display: flex;
-  flex-direction: column;
+  list-style: none;
+  /* justify-content: flex-start; */
+  background-color: rgb(36, 37, 36);
+  height: 70px;
+  width: 100%;
+  padding: 10px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  
+
+}
+
+.logo {
+  font-weight: 900;
+  font-family: sans-serif;
+  font-style: normal;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  margin-right: 20px;
+  display: flex;
+  justify-content: flex-start;
+  /* border: 1px solid green; */
+  width: 20%;
+}
+
+.nav-bar {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 20px;
+  /* border: 1px solid red; */
+  width: 80%;
+  font-family: sans-serif;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+li {
+  font-size: 20px;
+  padding: 10px;
+  /* font-size: 15px; */
+  font-family: sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+Link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-bar > Link:hover{
+  color: rgb(255, 255, 255);
+}
+
+input[ type="search"] {
+  height: 30px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.form-container {
+  position: absolute;
+  width: 500px;
+  height: 400px;
+  float: left;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid whitesmoke;
+  box-shadow: inset;
+  padding: 15px;
+  left: 10%;
+  top: 15%;
+  border-radius: 12px;
+  opacity: 0.7;
+}
+
+.frm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.frm > input[type="text"] {
+  width: 100%;
+  height: 50px;
+  margin-top: 15px;
+  border: none;
+  border-bottom: 1px solid whitesmoke;
+  padding: 20px;
+  background-color: rgb(243, 238, 238);
+}
+
+.frm > .btn {
+  width: 300px;
+  height: 45px;
+  color: black;
+  padding: 10px;
+  font-weight: 800;
+  font-family: sans-serif;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 400px;
+  position: absolute;
+  top: 20%;
+  /* left: 5%; */
+  border: 2px solid green;
+  /* margin-left: auto;
+  margin-right: auto; */
+  background-color: antiquewhite;
+  border-radius: 10px;
+  background: black;
+  opacity: 0.7;
+  color: white;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 10px;
+  padding-top: 5px;
+}
+
+.form-elements {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="submit"] {
+  width: 25rem;
+  height: 3rem;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.book-form {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 20%;
+  width: 95%;
+  height: 64%;
+  border: 2px solid white;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 10px;
+  justify-content: center;
+  align-content: center;
+  /* color: red; */
+}
+
+.cab-details {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: black;
+  opacity: 0.7;
+  color: white;
+  padding: 20px;
+  align-content: center;
+  align-items: center;
+  height: 370px;
+  width: 400px;
+}
+
+.cab-details:hover {
+  transform: scale(0.5px);
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.btn-book {
+  width: 10rem;
+  height: 3rem;
+  color: rgb(255, 255, 255);
+  background-color: blueviolet;
+  padding: 5px;
+  margin-top: 3px;
+  border-radius: 1rem;
+  border: 0.5px solid white;
+  cursor: pointer;
+}
+
+.btn-book:hover {
+  color: rgb(41, 189, 97);
+  background-color: white;
+  border: 2px solid blueviolet;
+  transition: ease-in-out 1s;
+}
+
+.footer {
+  background-color: black;
+  height: 5rem;
+  display: flex;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  margin-top: 25px;
+}
+
+/* Media query for small screen */
+
+@media only screen and (max-width: 600px) {
+  .main-app {
+    width: 100%;
+    height: auto;
+    background-image: none;
+    position: relative;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+ .main-nav-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  z-index: 2;
+ }
+
+ .nav-bar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  z-index: 3;
+  position: absolute;
+ }
+
+ .book-form {
+  display: flex;
+  flex-direction: column;
+  top: 1100%;
+  position: absolute;
+ }
+
+ .footer {
+ display: none;
+ }
+ .contact-form {
+   display: flex;
+   width: 95%;
+   top: 300%;
+ }
+
+ input[type="text"],
+ input[type="email"],
+ input[type="submit"] {
+   width: 20rem;
+   height: 3rem;
+   padding: 5px;
+   font-size: 20px;
+   border-radius: 10px;
+ }
+
+ .form-container {
+  top: 240%;
+  width: 85%;
+
+ }
 }
